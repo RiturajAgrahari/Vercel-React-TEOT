@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./preregister.css"
-import bg from "../../static/TheEndofTime.logo.png"
+import bg from "../../../static/TheEndofTime.logo.png"
 import { wait } from "@testing-library/user-event/dist/utils";
 
 const PreRegister = () => {

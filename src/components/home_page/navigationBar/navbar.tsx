@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react'
-import favicon from '../../static/favicon2.png';
+import favicon from '../../../static/favicon2.png';
 import './navbar.css'
 import { Link } from 'react-router-dom'
 

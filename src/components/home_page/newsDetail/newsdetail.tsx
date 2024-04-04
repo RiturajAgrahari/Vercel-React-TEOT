@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
-import header_image from '../../static/mirage.png'
+import header_image from '../../../static/mirage.png'
 import "./newsdetail.css"
 
 interface ItemProps {

@@ -14,8 +14,8 @@ import SliderOperation from './components/admin/sliderOperations';
 import DashboardSidebar from './components/admin/dashboardSidebar';
 import Dashboard from './components/admin/main';
 import DevblogOperations from './components/admin/devblogsEditing';
-import NewsDetail from './components/home_page/newsdetail';
-import NewsPage from './components/home_page/news';
+import NewsDetail from './components/home_page/newsDetail/newsdetail';
+import NewsPage from './components/home_page/newsPage/news';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

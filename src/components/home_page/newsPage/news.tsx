@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./news.css"
-import header_image from "../../static/mirage.png"
+import header_image from "../../../static/mirage.png"
 import { Link } from "react-router-dom";
 
 

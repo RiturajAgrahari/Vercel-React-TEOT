@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css"
-import favicon from "../../static/favicon2.png"
+import favicon from "../../../static/favicon2.png"
 import { Link } from 'react-router-dom'
 
 
