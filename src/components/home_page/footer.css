@@ -1,0 +1,127 @@
+.footer {
+    background-color: black;
+    padding-bottom: 1rem;
+}
+
+.footer h1{
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.footer .social_media {
+    border: none;
+}
+
+.footer .social_media ul{
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 1rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .social_media ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+}
+
+
+.footer .social_media ul a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;    
+    border: 2px solid gray;
+    transition: 0.3s ease;
+}
+
+.footer .social_media ul a:hover{
+    border: 2px solid #FF3131;
+    color: #FF3131;
+}
+
+.footer .end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .logo {
+    border-right: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.footer .logo img{
+    width: 50%;
+}
+
+.footer .policies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: gray;
+    margin-left: 1rem;
+}
+
+.footer .policies .license p{
+    margin: 0;
+}
+
+.footer .policies .terms p:first-child{
+    border-right: 1px solid gray;
+}
+
+.footer .policies .terms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer .policies .terms p{
+    padding: 0 1rem;
+    margin: 0.2rem;
+}
+
+.footer .policies .terms p:hover{
+    color: white;
+}
+
+.footer .policies .terms .cl3 {
+    color: gray;
+}
+
+
+.footer .policies .terms .cl3:hover {
+    color: white;
+}
+
+@media (max-width: 625px) {
+    .footer .end{
+        flex-direction: column;
+    }
+    .footer .end .logo {
+        border: none;
+    }
+
+    .footer .policies {
+        margin: 0;  
+    }
+}

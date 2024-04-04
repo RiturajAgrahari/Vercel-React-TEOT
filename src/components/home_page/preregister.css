@@ -1,0 +1,210 @@
+/* .overlap {
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+} */
+
+.error_message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    z-index: 199;
+    top: -20px;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 20px 80px;
+    margin-top: 15px;
+    transition: background-color ease-in 0.2s, visibility ease-in 0.3s, top ease-in 0.2s;
+}
+
+.show_error{
+    visibility: visible;
+    background-color: rgba(201, 91, 91, 0.5);
+    border: 1px solid rgb(181, 76, 76);
+    border-left: 15px solid rgb(239, 106, 106);
+    top: 0;
+}
+
+.show_success {
+    visibility: visible;
+    background-color: rgba(91, 201, 106, 0.5);
+    border: 1px solid rgb(90, 181, 76);
+    border-left: 15px solid rgb(106, 239, 144);
+    top: 0; 
+}
+
+.error_message::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition: width ease-out 5s;
+    bottom: 0;
+    left: 0;
+}
+
+.show_error:after{
+    width: 100%;
+    background-color: rgb(249, 26, 26);
+}
+
+.show_success:after {
+    width: 100%;
+    background-color: rgb(26, 255, 30);
+}
+
+
+.register_main {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 1200px;
+    position: relative;
+}
+
+.register_main .overlay {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.register_main h1{
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form input{
+    background-color: rgb(233, 233, 233, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 2px black;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 15px;
+    margin: 0.5rem 0;
+    border: None;
+    width: 50%;
+    color: gray;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.form input[type='email']:hover{
+    box-shadow: 0 0 5px 4px black;
+}
+
+.form input[type='email']:focus{
+    box-shadow: 0 0 5px 2px #FF3131;
+    border: none;
+    outline: none;
+}
+
+.form input[type='email']:focus + button{
+    background-color: rgba(210, 40, 40, 1);
+    border: 1px solid rgb(210, 40, 40);
+}
+
+.form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1.5rem 0;
+    color: white;
+    width: 30%;
+    height: 20%;
+    font-size: 25px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 1rem;
+}
+
+.form button:hover{
+    background-color: rgba(210, 40, 40, 1);
+    border: 1px solid rgb(210, 40, 40   );
+}
+
+.register_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_main .registered {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 14rem;
+    color: wheat;
+}
+
+.register_main .registered .numbers {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    padding: 2rem 0 0;
+}
+
+.register_main .registered .text {
+    font-size: 36px;
+    padding: 0 0 2rem;
+    margin-top: 0;
+}
+
+@media (max-width: 950px) {
+    .register_main {
+        height: 950px;
+    }
+}
+
+@media (max-width: 625px) {
+    .form input{
+        width: 80%;
+    }
+
+    .form button {
+        width: 60%;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-30%);
+    transition: all 0.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}

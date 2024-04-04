@@ -1,0 +1,48 @@
+
+.main_video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.main_video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.video_slogan {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+}
+
+.pre_register {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 0rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.pre_register:hover{
+    border: 1px solid red;
+    color: red;
+}
+

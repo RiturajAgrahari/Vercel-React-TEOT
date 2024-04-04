@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c2b26684.css",
+    "main.js": "/static/js/main.6beacbd2.js",
+    "static/media/TheEndofTime.logo.png": "/static/media/TheEndofTime.logo.721e61739a8ea74eaea0.png",
+    "static/media/video.mp4": "/static/media/video.c1f1768b48d726b2d2c5.mp4",
+    "static/media/mirage.png": "/static/media/mirage.312ed50259e9c08d9884.png",
+    "static/media/favicon2.png": "/static/media/favicon2.b774d7c0380af7f5f45c.png",
+    "index.html": "/index.html",
+    "main.c2b26684.css.map": "/static/css/main.c2b26684.css.map",
+    "main.6beacbd2.js.map": "/static/js/main.6beacbd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2b26684.css",
+    "static/js/main.6beacbd2.js"
+  ]
+}

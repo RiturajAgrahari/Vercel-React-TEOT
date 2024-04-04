@@ -1,0 +1,356 @@
+body {
+    background-color: rgb(16, 16, 15);
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 102;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .logo img{
+    width: 50%;
+}
+
+.navbar .links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .links li{
+    cursor: pointer;
+    position: relative;
+    padding: 11px 0;
+}
+
+.navbar .links li:hover .link{
+    color: red;
+}
+
+.navbar .links li::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 23px;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width .2s ease-in;
+}
+
+.navbar .links li:hover::after {
+    width: 70%;
+}
+
+.navbar .links .link {
+    text-decoration: none;
+    color: #fff;
+    padding: 11px 2.8rem;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.navbar .flt {
+    flex: auto; 
+}
+
+.navbar .language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin: 0 auto;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+}
+
+.navbar .language svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem;
+    padding-top: 0.2rem;
+}
+
+.navbar .showLanguage {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    width: 175px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 101;
+    transition: background-color 0.5s ease, top 0.5s ease;
+}
+
+.navbar .language:hover .showLanguage{
+    z-index: 102;
+    visibility: visible;
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.navbar .showLanguage ul{
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0;
+}
+.navbar .showLanguage li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid gray;
+}
+.navbar .showLanguage li:last-child {
+    border: none;
+}
+.navbar .showLanguage .link{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.navbar .showLanguage li:hover .link{
+    color: red;
+}
+
+.navbar_logo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 104;
+    cursor: pointer;
+}
+
+
+.btn {
+    width: 42px;
+    height: 50px;
+    background: transparent;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lines,.lines::after,.lines::before {
+    background-color: #fff;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition: all 0.3s;
+}
+.lines::before{
+    content: '';
+    top: -11px;
+    left: 0;
+}
+.lines::after{
+    content: '';
+    top: 11px;
+    left: 0;
+}   
+
+
+/* NEW  side coming nav bar like language*/
+/* .navbar_logo:hover .lines::after{
+    transform: translateY(-11px) rotate(-45deg) scaleX(1);
+}
+.navbar_logo:hover .lines::before{
+    transform: translateY(11px) rotate(45deg) scaleX(1);
+}
+.navbar_logo:hover .lines{
+    transform: rotate(-180deg);
+    background: transparent;
+} */
+
+/* .navbar .navbar_logo:hover .sidebar_links{
+    visibility: visible;
+    top: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+} */
+
+
+
+/* For navigation bar logo changing icon that comes out from side on click*/
+/* hover doesn't work in phone , so on click !...*/
+
+.lines.target{
+    transform: rotate(-180deg);
+    background: transparent;
+}
+.lines.target::after{
+    transform: translateY(-11px) rotate(-45deg) scaleX(1);
+}
+.lines.target::before{
+    transform: translateY(11px) rotate(45deg) scaleX(1);
+}
+
+
+/* NEW  side coming nav bar like language*/
+
+.navbar .sidebar_links {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 175px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 101;
+    transition: background-color 0.5s ease, top 0.5s ease;
+}
+
+.navbar .sidebar_links ul{
+    list-style: none;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+}
+.navbar .sidebar_links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid gray;
+}
+.navbar .sidebar_links li:last-child {
+    border: none;
+}
+.navbar .sidebar_links .link{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.navbar .sidebar_links li:hover .link{
+    color: red;
+}
+
+/* For half space navigation bar that comes out from side on click*/
+
+
+/* .navbar .sidebar_links {
+    position: absolute;
+    top: 52px;
+    right: -50%;
+    height: 100vh;
+    width: 50%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.4s;
+}
+
+.navbar .sidebar_links ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .sidebar_links li{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 0;
+    cursor: pointer;
+    border-bottom: 0.5px solid gray;
+    transition: 0.3s;
+}
+
+.navbar .sidebar_links .link{
+    padding: 1.5rem 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar .sidebar_links li:hover .link{
+    color: red;
+    font-weight: bold;
+    transform: scale(1.3);
+} */
+
+@media (max-width: 1200px) {
+    .navbar .language {
+        margin: 0 4.6rem 0 0;
+    }
+    .navbar .language span{
+        display: none;
+    }
+    .navbar .language .bi-chevron-down {
+        display: none;
+    }
+    .navbar .language svg {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding-top: 0;
+    }
+    .navbar .showLanguage {
+        width: 150px;
+    }
+    .navbar .sidebar_links{
+        display: none;
+    }
+}
+
+@media (max-width: 925px) {
+    .navbar .language {
+        margin: 0;
+    }
+
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .navbar_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar .sidebar_links{
+        display: flex;
+    }
+}
+
+
+/* For full space navigation bar that comes out from side on click*/
+
+/* @media (max-width: 700px) {
+    .navbar .sidebar_links {
+        width: 100%;
+    }
+    .navbar .sidebar_links li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+} */

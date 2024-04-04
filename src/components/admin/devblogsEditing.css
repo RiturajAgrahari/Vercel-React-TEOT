@@ -1,0 +1,175 @@
+.dashboard_content {
+    background-color: white;
+    color: #181818;
+    display: flex;
+}
+
+.fill_gap {
+    width: 20%;
+    height: 100vh;
+}
+
+.fill-content {
+    display: block;
+    width: 80%;
+}
+
+.dashboard_content_heading {
+    text-align: center;
+}
+
+.edit_devblogs {
+    margin: 0 2rem;
+    color: #181818;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit_devblog {
+    margin: 0 ;
+    width: calc(100% / 4 - 20px);
+    box-sizing: border-box;
+    transition: 0.2s;
+    }
+
+.edit_devblog img {
+    width:100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.edit_devblog_title {
+    font-size: 2vw;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.edit_devbloghover:hover img {
+    transition: 0.3s ease;
+    transform: scale(1.05) translateY(-15px);
+}
+.edit_devbloghover:hover .edit_devblog_title{
+    transition: 0.3s ease;
+    transform: scale(1.05) translateY(-14px);
+    color: rgb(208, 43, 52);
+}
+
+.edit_devblog_date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: gray;
+    margin-top: 3rem;
+}
+
+.edit_devblog_date p {
+    color: rgb(182, 156, 142);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.1s;
+}
+.edit_devblog_date p:hover {
+    color: #181818;
+}
+
+.edit_devblog a {
+    background-color: rgb(153, 184, 159);
+    opacity: 0.5;
+    flex: right;
+    padding: 3px 20px;
+    transition: 0.5s;
+    color: #181818;
+    font-weight: bold;
+}
+.edit_devblog a:hover {
+    opacity: 1;
+    background-color: rgb(153, 184, 159);
+}
+
+@media (max-width: 925px) {
+    .edit_devblog a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .edit_devblog_date p{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+    .edit_devblog_date {
+        display: block;
+    }
+}
+
+@media (max-width: 850px) {
+    .edit_devblog {
+        width: calc(100% / 3 - 20px);
+    }
+}
+
+@media (max-width: 750px) {
+    .edit_devblog {
+        width: calc(100% / 2 - 20px);
+    }
+    .edit_devblog_title{
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .edit_devblogs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        overflow-x: auto;
+        padding-top: 2rem;
+    }
+    .edit_devblog {
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
+        margin: 0 5%;
+    }
+
+    .edit_devblog img{
+        width: 100%;
+    }
+}
+
+.devblog_crud {
+    margin: 20px;
+    border: none;
+}
+
+.devblog_crud table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.devblog_crud td, .devblog_crud th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+} 
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}  
+
+tr:last-child:hover{
+    background-color: #bdbcbc;
+}
+
+.crud_delete, .crud_edit {
+    text-align: center !important;
+    padding: 0 !important;
+    fill: gray;
+}
+
+.devblog_crud td svg:hover{
+    fill: black;
+}
