@@ -132,6 +132,11 @@
         font-weight: 500;
     }
 
+    .buttons .row2 a svg{
+        width: 6vw;
+        height: 6vw;
+    }
+
     .buttons div {
         margin: 5px 0;
     }
