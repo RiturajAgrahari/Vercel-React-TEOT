@@ -1,5 +1,35 @@
-/* .random_page {
-    position: absolute;
-    height: 20%;
-    background-color: black;
-} */
+.introduction_heading {
+    text-align: center;
+}
+
+.introduction_content {
+    font-size: 1.2vw;
+    margin: 60px;
+}
+
+@media (max-width: 1200px) {
+    .introduction_content {
+        font-size: 1.5vw;
+        margin: 50px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .introduction_content {
+        font-size: 1.7vw;
+        margin: 40px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .introduction_content {
+        font-size: 2vw;
+        margin: 30px;
+    }
+    .introduction_heading {
+        font-size: 5vw;
+    }
+    
+}
