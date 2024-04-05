@@ -46,15 +46,15 @@ const Devblog: React.FC = () => {
             setScreenSize({ width: window.innerWidth, height: window.innerHeight });
             const devblogElements = document.querySelectorAll('.devblog');
     
-            if (newWidth > 850 && devblogElements.length >= 2) {
+            if (newWidth > 1200 && devblogElements.length >= 2) {
 
                 setNewsData(loo);
 
-              } else if (newWidth < 850 && newWidth > 750 && devblogElements.length <= 4){
+              } else if (newWidth < 1200 && newWidth > 850 && devblogElements.length <= 4){
                 
                 setNewsData(loo.slice(0, 3));
 
-              } else if (newWidth < 750 && newWidth > 550 && devblogElements.length <= 4) {
+              } else if (newWidth < 850 && newWidth > 550 && devblogElements.length <= 4) {
 
                 setNewsData(loo.slice(0, 2));
 

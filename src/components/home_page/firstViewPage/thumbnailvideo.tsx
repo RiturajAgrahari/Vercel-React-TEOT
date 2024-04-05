@@ -1,7 +1,6 @@
 import React from "react";
 import video from '../../../static/video.mp4';
 import './main.css'
-import favicon from '../../../static/favicon2.png'
 
 const MainVideo = () => {
 
