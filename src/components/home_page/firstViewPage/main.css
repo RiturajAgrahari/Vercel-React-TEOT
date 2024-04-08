@@ -85,10 +85,15 @@
     margin-left: 10px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.buttons .download_platforms .lock_download:hover .override_lock{
+.buttons .download_platforms .lock_download:last-child:hover .override_lock{
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.buttons .download_platforms .lock_download:first-child:hover .override_lock{
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .buttons .download_platforms .lock_download:hover .override_lock svg{
