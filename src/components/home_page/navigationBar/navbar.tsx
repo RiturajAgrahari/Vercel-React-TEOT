@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react'
-import favicon from '../../../static/favicon2.png';
+import logo from '../../../static/teotlogo.png';
 import './navbar.css'
 import { Link } from 'react-router-dom'
 
@@ -54,7 +54,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
 
-            <div className='logo'><img src={favicon} alt='Logo'></img></div>
+            <div className='logo'><img src={logo} alt='Logo'></img></div>
 
             <div className='links'>
                 <ul>

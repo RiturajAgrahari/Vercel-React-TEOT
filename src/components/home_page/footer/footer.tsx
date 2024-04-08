@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css"
-import favicon from "../../../static/favicon2.png"
+import logo from "../../../static/teotlogo.png"
 import { Link } from 'react-router-dom'
 
 
@@ -49,7 +49,7 @@ const Footer= () => {
                 </ul>
             </div>
             <div className="end">
-                <div className='logo'><img src={favicon} alt='Logo'></img></div>
+                <div className='logo'><img src={logo} alt='Logo'></img></div>
                 <div className="policies">
                     <div className="license"><p>COPYRIGHT © LASER EDGE STUDIOS ALL RIGHT RESERVED</p></div>
                     <div className="terms">
