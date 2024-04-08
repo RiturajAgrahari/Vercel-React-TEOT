@@ -138,15 +138,6 @@
     margin-right: 0;
 }
 
-.buttons .row1 a:first-child {
-    border: 2px solid blue;
-    font-weight: 600;
-}
-
-.buttons .row1 a:last-child {
-    border: 2px solid yellow;
-}
-
 .buttons .row2 a:last-child {
     /* border: 2px solid red; */
     width: 100%;
