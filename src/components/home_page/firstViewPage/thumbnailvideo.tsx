@@ -1,5 +1,5 @@
 import React from "react";
-import front_image from '../../../static/bg1.png';
+import front_image from '../../../static/bg3.png';
 import play_store_image from '../../../static/gp_icon.png';
 import apple_store_image from '../../../static/as_icon.png';
 import './main.css'
@@ -42,7 +42,7 @@ const MainVideo = () => {
                     </div>
                     <div className="row1">
                         <a className='pre_register' href='#preRegister' onClick={(e) => handleScroll('preRegister', e)}>Pre-Register Now</a>
-                        <a className='pre_register' href='#download' onClick={(e) => handleScroll('download', e)}>Devblog</a>
+                        <a className='pre_register' href='#news' onClick={(e) => handleScroll('news', e)}>Devblog</a>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ const Footer= () => {
             <div className="end">
                 <div className='logo'><img src={logo} alt='Logo'></img></div>
                 <div className="policies">
-                    <div className="license"><p>COPYRIGHT © ESCAPE STUDIOS ALL RIGHT RESERVED</p></div>
+                    <div className="license"><p>COPYRIGHT © ESCAPE STUDIOS ALL RIGHTS RESERVED</p></div>
                     <div className="terms">
                         <p><Link className="cl3" to='/Privacy Policy'>Privacy Policy</Link></p>
                         <p><Link className="cl3" to='/Terms Of Conditions'>Terms Of Service</Link></p>
