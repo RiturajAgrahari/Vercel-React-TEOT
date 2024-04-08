@@ -91,7 +91,7 @@ const Navbar = () => {
                     <div className={icon}></div>
                 </div>
                 {/* NEW NAVBAR like language one */}
-                <div className='sidebar_links' style={{visibility: visible ? 'visible' : 'hidden', top: visible ? '50px' : '0px', backgroundColor: visible ? 'rgba(255, 255, 255, 0.1)' : 'background-color: rgba(255, 255, 255, 0)'}}>
+                <div className='sidebar_links' style={{visibility: visible ? 'visible' : 'hidden', top: visible ? '50px' : '0px', backgroundColor: visible ? 'rgba(0, 0, 0, 0.5' : 'background-color: rgba(255, 255, 255, 0)'}}>
                     <ul>
                         <li><a className='link' href='#home' onClick={(e) => {handleScroll('home', e); changeIcon();}}>Home</a></li>
                         <li><a className='link' href='#news' onClick={(e) => {handleScroll('news', e); changeIcon();}}>News</a></li>

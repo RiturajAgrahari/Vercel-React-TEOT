@@ -1,12 +1,12 @@
 .main_video {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: left;
+    align-items: end;
+    justify-content: center;
     min-height: 100vh;
 }
 
-.main_video video {
+.main_video img {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,11 +17,22 @@
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+/* 
+.main_video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+} */
 
 .video_slogan {
-    /* border: 1px solid yellow; */
     width: 40%;
-    margin-left: 100px;
+    margin-bottom: 100px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -61,11 +72,79 @@
     align-items: center;
 }
 
+.buttons .download_platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .download_platforms .lock_download {
+    /* border: 1px solid purple; */
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .download_platforms .lock_download:hover .override_lock{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.buttons .download_platforms .lock_download:hover .override_lock svg{
+    fill: white;
+    opacity: 0.7;
+}
+
+.buttons .download_platforms .lock_download .override_lock {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.buttons .download_platforms .lock_download .override_lock svg {
+    width: 30px;
+    height: 30px;
+    fill: black;
+    opacity: 0.5;
+}
+
+.buttons .download_platforms .lock_download:first-child {
+    justify-content: end;
+}
+
+.buttons .download_platforms .lock_download:last-child {
+    justify-content: left;
+}
+
+.buttons .download_platforms img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
 .buttons .row1 a{
     font-size: 1.5vw;
     padding: 0.5rem 0;
     width: 48%;
     margin-right: 0;
+}
+
+.buttons .row1 a:first-child {
+    border: 2px solid blue;
+    font-weight: 600;
+}
+
+.buttons .row1 a:last-child {
+    border: 2px solid yellow;
 }
 
 .buttons .row2 a:last-child {
@@ -112,7 +191,7 @@
 @media (max-width: 1200px) {
     .main_video {
         justify-content: center;
-        align-items: center;
+        align-items: end;
     }
 
     .video_slogan {
