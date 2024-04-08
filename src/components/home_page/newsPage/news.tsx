@@ -11,6 +11,7 @@ interface ItemProps {
     date: string;
     category: string;
     image_url: string;
+    news_content: string;
 }
 
 const NewsPage = () => {
@@ -36,10 +37,11 @@ useEffect(()=>{
     }, [])
 
     return (
-        <div className="all_newsa">
-        <div className="news_header_image">
-            <img src={header_image}></img>
-        </div>
+        <div className="all_news">
+            <div className="news_header_image">
+                <img src={header_image}></img>
+            </div>
+            <div className="news_page_header">NEWS</div>
             <div className="news_container">
                 {allNews.map((item: ItemProps, index: number) => (
                     <Link className="go_on_news" style={{color: "white"}} to={`/News/${item.id}`}>
@@ -50,6 +52,7 @@ useEffect(()=>{
                             <div className="news_date">{item.date.substring(0, 10)}</div>
                             <div className="news_title">{item.title}</div>
                             <div className="news_category">{item.category}</div>
+                            <p className="news_details">{item.news_content}</p>
                         </div>
                     </Link>
                 ))}
