@@ -2,9 +2,15 @@ import React from "react";
 import "./footer.css"
 import logo from "../../../static/teotlogo.png"
 import { Link } from 'react-router-dom'
+import patreon from '../../../static/patreon.png'
 
 
 const Footer= () => {
+
+    const OpenPatreonPage = () => {
+        window.open("https://www.patreon.com/theendoftime?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink", "_blank")
+    }
+
     return (
         <div className="footer">
             <h1>FOLLOW US ON</h1>
@@ -56,6 +62,10 @@ const Footer= () => {
                         <p><Link className="cl3" to='/Privacy Policy'>Privacy Policy</Link></p>
                         <p><Link className="cl3" to='/Terms Of Conditions'>Terms Of Service</Link></p>
                     </div>
+                </div>
+                <div className="patreon">
+                    <img src={patreon} onClick={OpenPatreonPage}></img>
+                    <a className="patreon_text" target="_blank" href="https://www.patreon.com/theendoftime?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" >Our Patreon</a>
                 </div>
             </div>      
         </div>
