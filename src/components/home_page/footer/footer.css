@@ -1,23 +1,16 @@
 .footer {
     background-color: black;
     padding-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.connections {
-    border: 2px solid blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer  .social_media h1{
+.footer h1{
     text-align: center;
     margin: 0;
     padding: 1rem 0;
+}
+
+.footer .social_media {
+    border: none;
 }
 
 .footer .social_media ul{
@@ -59,8 +52,6 @@
     color: #FF3131;
 }
 
-
-
 .footer .end {
     display: flex;
     align-items: center;
@@ -80,15 +71,13 @@
 }
 
 .footer .policies {
-    border-right: 1px solid gray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 10px;
     color: gray;
-    margin: 16px 1rem;
-    padding: 6px 0;
+    margin-left: 1rem;
 }
 
 .footer .policies .license p{
@@ -124,20 +113,6 @@
     color: white;
 }
 
-.footer .patreon {
-    cursor: pointer;
-}
-
-.footer .patreon .patreon_text {
-    display: none;
-}
-
-.footer .patreon img{
-    height: 50px;
-    width: 50px;
-    padding: 1rem 6rem;
-}
-
 @media (max-width: 625px) {
     .footer .end{
         flex-direction: column;
@@ -148,22 +123,5 @@
 
     .footer .policies {
         margin: 0;  
-        border-right: none;
-    }
-
-    .footer .patreon img {
-        display: none;
-    }
-
-    .footer .patreon .patreon_text {
-        display: block;
-        color: gray;
-        padding: 0 1rem;
-        border-right: 1px solid gray;
-        border-left: 1px solid gray;
-    }
-
-    .footer .patreon .patreon_text:hover {
-        color: white;
     }
 }
