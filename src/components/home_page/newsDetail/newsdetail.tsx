@@ -56,9 +56,15 @@ const NewsDetail: React.FC = () => {
 
   return (
     <div>
-        <div className="news_header_image">
-            <img src={header_image}></img>
-        </div>
+      <div className="news_header_image">
+          <img src={header_image}></img>
+      </div>
+      <div className="navigation_links">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+        <Link className="make_me_gray" to={"/"}>Home</Link>
+        <p className="greater_than">&gt;</p>
+        <Link className="make_me_gray" to={"/News"}>News</Link>
+      </div>
       <div className="news_detail_content">
         <div className="new_header">
             <h1 className="news_header_title">{markdownContent.title}</h1>

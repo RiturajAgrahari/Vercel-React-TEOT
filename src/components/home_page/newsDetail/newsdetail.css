@@ -9,8 +9,44 @@
     object-fit: cover;
 }
 
+.navigation_links {
+    margin: 100px;
+    margin-bottom: 0;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+}
+
+.make_me_gray {
+    color: gray;
+    margin-left: 5px;
+}
+
+.make_me_gray:hover {
+    text-decoration: underline;
+}
+
+.navigation_links .greater_than {
+    margin-left: 5px;
+    color: gray;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 5px;
+    padding-bottom: 3px;
+}
+
+.navigation_links svg {
+    fill: gray;
+}
+
 .news_detail_content {
-    margin: 100px !important;
+    margin: 0 100px !important;
 }
 
 .new_header {
