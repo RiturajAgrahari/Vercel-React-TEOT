@@ -46,7 +46,7 @@ const NewsDetail: React.FC = () => {
         <div className="news_header_image">
             <img src={header_image}></img>
         </div>
-      <div className="news_content">
+      <div className="news_detail_content">
         <div className="new_header">
             <h1 className="news_header_title">{markdownContent.title}</h1>
             <p className="news_header_date">{markdownContent.date.substring(0, 10)}</p>
