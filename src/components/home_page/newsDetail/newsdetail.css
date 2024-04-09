@@ -115,4 +115,8 @@
     .news_navigation .previous_news, .next_news{
         padding: 5px 20px;
     }
+
+    .navigation_links {
+        margin: 20px;
+    }
 }
