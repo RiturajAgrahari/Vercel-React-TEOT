@@ -2,6 +2,39 @@ a {
     text-decoration: none;
 }
 
+.devblog_component {
+    position: relative
+}
+
+.devblog_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.devblog_main::after, 
+.devblog_main::before {
+    content: " ";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background-color: #792e2e;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+}
+
+.devblog_main::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.devblog_main::before {
+    bottom: 2rem;
+    right: 0rem;
+}
+
 .devblog_main {
     display: block;
     width: 100%;
@@ -118,6 +151,7 @@ a {
 }
 
 @media (max-width: 925px) {
+
     .devblog a {
         display: flex;
         text-align: center;
@@ -135,12 +169,24 @@ a {
 }
 
 @media (max-width: 1200px) {
+    .devblog_main::after, 
+    .devblog_main::before {
+        width: 20.125rem;
+        height: 20.125rem;
+    }
+
     .devblog {
         width: calc(100% / 3 - 20px);
     }
 }
 
 @media (max-width: 850px) {
+    .devblog_main::after, 
+    .devblog_main::before {
+        width: 15.125rem;
+        height: 15.125rem;
+    }
+
     .devblog {
         width: calc(100% / 2 - 20px);
     }
@@ -150,6 +196,12 @@ a {
 }
 
 @media (max-width: 550px) {
+    .devblog_main::after, 
+    .devblog_main::before {
+        width: 10.125rem;
+        height: 10.125rem;
+    }
+
     .devblogs {
         display: flex;
         justify-content: space-between;

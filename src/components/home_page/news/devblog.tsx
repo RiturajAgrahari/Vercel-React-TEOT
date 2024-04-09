@@ -73,7 +73,8 @@ const Devblog: React.FC = () => {
       }, [loo]);
 
     return (
-            <div className="devblog_main" id="news">
+      <div className="devblog_component">
+          <div className="devblog_main" id="news">
                 <h1 className="devblog_heading hidden">
                     News
                 </h1>
@@ -93,6 +94,7 @@ const Devblog: React.FC = () => {
                     ))}
                 </div>
             </div>
+      </div>
     )
 }
 
