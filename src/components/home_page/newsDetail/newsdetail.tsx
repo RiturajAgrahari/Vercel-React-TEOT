@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import header_image from '../../../static/banner.png'
 import "./newsdetail.css"
+import { Link } from "react-router-dom"
 
 interface ItemProps {
     id: number
@@ -25,6 +26,10 @@ const NewsDetail: React.FC = () => {
   });  let { id } = useParams<{ id: string }>();
   
 
+  const [nextPage, setNextPage] = useState(true)
+  const [previousPage, setPreviousPage] = useState(true)
+
+
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
@@ -33,7 +38,16 @@ const NewsDetail: React.FC = () => {
           throw new Error('Failed to fetch Markdown');
         }
         const data = await response.json();
-        setMarkdownContent(data);
+        console.log(data)
+        setMarkdownContent(data.current);
+
+        if (data.next === null) {
+          setNextPage(false)
+        } else {setNextPage(true)}
+        if (data.previous === null) {
+          setPreviousPage(false)
+        } else {setPreviousPage(true)}
+
       } catch (error) {
         console.error('Error fetching Markdown:', error);
       }
@@ -52,6 +66,16 @@ const NewsDetail: React.FC = () => {
             <p className="news_header_date">{markdownContent.date.substring(0, 10)}</p>
         </div>
       <ReactMarkdown>{markdownContent.news_content}</ReactMarkdown>
+      </div>
+      <div className="news_navigation">
+        <Link to={previousPage ? `/News/${Number(id) - 1}` : "#"} className="previous_news" style={{display: previousPage ? "flex" : "none"}}>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+          PREVIOUS
+        </Link>
+        <Link to={nextPage ? `/News/${Number(id) + 1}` : "#"} className="next_news" style={{display: nextPage ? "flex" : "none"}}>
+          NEXT
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+        </Link>
       </div>
     </div>
   );
