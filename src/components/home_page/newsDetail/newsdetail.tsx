@@ -38,7 +38,6 @@ const NewsDetail: React.FC = () => {
           throw new Error('Failed to fetch Markdown');
         }
         const data = await response.json();
-        console.log(data)
         setMarkdownContent(data.current);
 
         if (data.next === null) {
