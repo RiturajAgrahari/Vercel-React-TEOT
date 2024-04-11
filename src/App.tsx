@@ -8,6 +8,7 @@ import Slider from './components/home_page/Slider/slider';
 import PreRegister from './components/home_page/preRegister/preregister';
 import Footer from './components/home_page/footer/footer';
 import Fix from './components/home_page/description/fix';
+import Cookies from './components/cookie/cookies';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Devblog />
         <PreRegister />
         <Footer />
+        <Cookies />
     </div>
   );
 }
