@@ -31,7 +31,7 @@ const PreRegister = () => {
     useEffect(() => {
         const fetchPreRegisteredUserData = async () => {
           try {
-            const PreRegisteredUserResponse = await fetch('http://127.0.0.1:8000/api/get_total_registered/');
+            const PreRegisteredUserResponse = await fetch('http://148.251.175.121:8000/api/get_total_registered/');
             if (!PreRegisteredUserResponse.ok) {
               throw new Error('failed to fetch data');
             }

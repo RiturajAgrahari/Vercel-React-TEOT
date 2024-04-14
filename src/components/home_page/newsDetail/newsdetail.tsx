@@ -33,7 +33,7 @@ const NewsDetail: React.FC = () => {
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_news_content/${id}`);
+        const response = await fetch(`http://148.251.175.121:8000/api/get_news_content/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch Markdown');
         }

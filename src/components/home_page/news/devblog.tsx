@@ -21,7 +21,7 @@ const Devblog: React.FC = () => {
       useEffect(() => {
         const fetchNewsData = async () => {
           try {
-            const newsResponse = await fetch('http://127.0.0.1:8000/api/get_news/');
+            const newsResponse = await fetch('http://148.251.175.121:8000/api/get_news/');
             if (!newsResponse.ok) {
               throw new Error('failed to fetch data');
             }
