@@ -49,7 +49,7 @@ const PreRegister = () => {
     const handlePreRegisterEmail = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/addpreregisteruser/', {
+            const response = await fetch('http://148.251.175.121:8000/api/addpreregisteruser/', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
