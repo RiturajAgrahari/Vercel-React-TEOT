@@ -26,7 +26,7 @@ const Slider = () => {
     useEffect(() => {
         const fetchSliderData = async () => {
           try {
-            const sliderResponse = await fetch('http://148.251.175.121:8000/api/get_slider_image/');
+            const sliderResponse = await fetch('https://rituraj-agrahari.com/api/get_slider_image/');
             if (!sliderResponse.ok) {
               throw new Error('failed to fetch data');
             }
