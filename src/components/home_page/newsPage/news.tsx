@@ -22,7 +22,7 @@ const NewsPage = () => {
 useEffect(()=>{
     const fetchAllNews = async () => {
         try {
-            const allNewsResponse = await fetch("http://148.251.175.121:8000/api/get_all_news/")
+            const allNewsResponse = await fetch("https://rituraj-agrahari.com/api/get_all_news/")
             if (!allNewsResponse.ok) {
                 throw new Error('failed to fetch data')
             } 
