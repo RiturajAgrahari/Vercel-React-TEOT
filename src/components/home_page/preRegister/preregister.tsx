@@ -31,7 +31,7 @@ const PreRegister = () => {
     useEffect(() => {
         const fetchPreRegisteredUserData = async () => {
           try {
-            const PreRegisteredUserResponse = await fetch('https://rituraj-agrahari.com/api/get_total_registered/');
+            const PreRegisteredUserResponse = await fetch('http://148.251.175.121:8000/api/get_total_registered/');
             if (!PreRegisteredUserResponse.ok) {
               throw new Error('failed to fetch data');
             }
@@ -49,7 +49,7 @@ const PreRegister = () => {
     const handlePreRegisterEmail = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await fetch('https://rituraj-agrahari.com/api/addpreregisteruser/', {
+            const response = await fetch('http://148.251.175.121:8000/api/addpreregisteruser/', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
