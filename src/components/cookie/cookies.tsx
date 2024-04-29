@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const Cookies = () => {
     const [ cookieSetting, setCookieSetting ] = useState(false)
-    const [ hideCookie, setHideCookie] = useState("-35%")
+    const [ hideCookie, setHideCookie] = useState("-100%")
 
     useEffect(() => {
         const handleResize = () => {
